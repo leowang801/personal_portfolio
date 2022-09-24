@@ -18,7 +18,7 @@
     --fw-bold: 900;
 
     --clr-light: #f3f3f3;
-    --clr-dark: #303030;
+    --clr-dark: black;
     --clr-accent: #d5f8ff;
 
     --fs-h1: 3rem;
@@ -109,8 +109,8 @@ header {
 
 .nav {
     position: fixed;
-    background: var(--clr-dark);
-    color: var(--clr-light);
+    background-image: radial-gradient(var(--clr-light) 50%, var(--clr-accent));
+    color: var(--clr-dark);
     top: 0;
     bottom: 0;
     left: 0;
@@ -142,7 +142,7 @@ header {
 
 
 .nav__link:hover {
-    color: var(--clr-accent);
+    color: lightblue;
 }
 
 .nav-toggle {
@@ -168,12 +168,12 @@ header {
 
 .nav-open .hamburger {
     transform: rotate(225deg);
-    background: var(--clr-light);
+    background: var(--clr-dark);
 }
 
 .nav-open .hamburger::before {
     transform: rotate(90deg) translateX(-12px);
-    background: var(--clr-light);
+    background: var(--clr-dark);
 }
 
 .nav-open .hamburger::after {
