@@ -79,6 +79,7 @@ h3 {font-size: var(--fs-h3);}
 
 .intro__title {
     font-weight: var(--fw-reg);
+    margin-top: 1.5em;
 }
 
 .intro__title strong {
@@ -88,11 +89,8 @@ h3 {font-size: var(--fs-h3);}
 .page__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
-}
-
-.intro__subtitle {
     background: var(--clr-accent);
-
+    padding-left: 0.5em;
 }
 
 /* Header */
@@ -156,14 +154,14 @@ nav {
         0.25em 0.25em 0.5em rgba(0,0,0,0.35);;
     }
 
-    .intro__subtitle {
+    .page__subtitle {
         align-self: start;
         grid-column: -1 / 1;
         grid-row: 2;
         text-align: right;
         position: relative;
         left: -1.5em;
-        width: calc(100% + 1.5em);
+        width: calc(100% + 3em);
         padding-right: 5em;
         border-radius: 3px;
     }
@@ -192,3 +190,61 @@ nav {
     }
 }
 
+.about {
+    max-width: 1000px;
+    margin: 0, auto;
+    position: relative;
+}
+
+
+
+.about__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+        padding-left: 10em;
+    }
+
+    .about__title {
+        grid-area: title;
+    }
+    .about__subtitle {
+        align-self: start;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -2em;
+        width: calc(100% + 7em);
+        padding-left: 2em;
+        padding-right: calc(200px + 2em);
+        text-align: left;
+        border-radius: 3px;
+    }
+
+    .about__img {
+        grid-area: img;
+        transform: scale(1.5);
+        position: relative;
+        margin-top: 4em;
+        z-index: 2;
+        border-radius: 5px;
+    }
+
+    .about__img:hover {
+        transform: scale(1.7);
+        transition-delay: 0.1s;
+        transition-duration: 0.8s;
+        transition-timing-function: ease-in-out;
+        box-shadow: 0.45em 0.45em 0.95em rgba(0, 0, 0, 0.45), 
+        0.25em 0.25em 0.5em rgba(0,0,0,0.35);;
+    }
+}
