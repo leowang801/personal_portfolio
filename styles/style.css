@@ -39,6 +39,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -136,6 +140,7 @@ header {
     text-decoration: none;
 }
 
+
 .nav__link:hover {
     color: var(--clr-accent);
 }
@@ -151,6 +156,28 @@ header {
     right: 1em;
     top: 1em;
     z-index: 1000;
+}
+
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(225deg);
+    background: var(--clr-light);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-12px);
+    background: var(--clr-light);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
 }
 
 .hamburger {
