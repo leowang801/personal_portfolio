@@ -40,12 +40,19 @@
 }
 
 body {
-    background: var(--clr-light);
     color: var(--clr-dark);
     margin: 0;
     font-family: 'Arvo';
     font-size: var(--fs-body);
     line-height: 1.6;
+
+    background-color: var(--clr-dark);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/background_image_laptop_code.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 
 img {
@@ -184,7 +191,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-light);
     width: 2.5em;
     height: 6px;
     border-radius: 1em;
@@ -222,41 +229,9 @@ header {
     max-width: 300px;
 }
 
-/* Logo Styles */ 
-@media (min-width: 600px) {
-    .logo {
-        display: grid;
-        width: 20%;
-        margin: 0, auto;
-        padding-top: 0em;
-        padding-left: 2.5em;
-        background-color: transparent;
-    }
-
-    .logo__img {
-        grid-area: img;
-        position: relative;
-        min-width: 200px;
-    }
-
-    .logo__img:hover {
-        transform: scale(1.08);
-        opacity: 1;
-        transition-delay: 0.1s;
-        transition-duration: 0.5s;
-        transition-timing-function: ease-in;
-    }
-}
 
 /* Project Section */
 .projects {
-    background-color: var(--clr-dark);
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/background_image_laptop_code.jpeg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-blend-mode: multiply;
     color: var(--clr-light);
     text-align: center;
 }
