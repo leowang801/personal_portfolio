@@ -386,3 +386,14 @@ header {
         padding: 0;
     }
 }
+
+.footer {
+    text-align: center;
+    color: var(--clr-dark);
+    padding: 2.5em 0;
+
+}
+
+.footer a {
+    color: inherit;
+}
