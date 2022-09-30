@@ -391,9 +391,25 @@ header {
     text-align: center;
     color: var(--clr-dark);
     padding: 2.5em 0;
-
+    background-image: linear-gradient(to top, var(--clr-accent), 
+                                    var(--clr-light));
+    height: 8em;
 }
 
-.footer a {
-    color: inherit;
+.footer a { color: inherit;}
+
+.contact__link--item:hover {
+    opacity: 0.7;
+}
+
+.contact__links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.contact__link--item {
+    padding: 0.5em;
 }

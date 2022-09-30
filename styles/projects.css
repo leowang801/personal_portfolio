@@ -39,6 +39,10 @@
     }
 }
 
+html {
+    background-color: var(--clr-dark);
+}
+
 body {
     color: var(--clr-dark);
     margin: 0;
